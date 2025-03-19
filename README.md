@@ -6,7 +6,9 @@
 ## Description
 
 **Start Date**: `21 Mar 2025, 13:00`
+
 **End Date**: `26 Mar, 13:00`
+
 
 ### Lore
 *In the ancient realm of Eldoria, a land rich with magic and steeped in legend, peace has reigned for centuries under the guidance of wise rulers and the protection of mystical creatures. Central to this harmony is the Dragon's Heart, a legendary artifact forged in the dawn of time by the dragon elders. The artifact maintains the balance between the mortal world and the realm of dragons, ensuring mutual respect and coexistence.*
