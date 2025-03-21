@@ -27,7 +27,7 @@
 **Team:** KlokaIndivider
 
 
-**Flags:** (0/62)
+**Flags:** (3/62)
 
 ![ ](assets/scoreboard.png)
 ![ ](assets/team-score.png)
@@ -42,7 +42,7 @@
 
 ## Web
 - [ ] [Trial_by_Fire](challenges/Trial_by_Fire)
-- [ ] [Whispers_of_the_Moonbeam](challenges/Whispers_of_the_Moonbeam)
+- [x] [Whispers_of_the_Moonbeam](challenges/Whispers_of_the_Moonbeam)
 - [ ] [Cyber_Attack](challenges/Cyber_Attack)
 - [ ] [Eldoria_Panel](challenges/Eldoria_Panel)
 - [ ] [Eldoria_Realms](challenges/Eldoria_Realms)
@@ -58,14 +58,14 @@
 - [ ] [The_Ancient_Citadel](challenges/The_Ancient_Citadel)
 
 ## Coding
-- [ ] [Summoners_Incantation](challenges/Summoners_Incantation)
+- [x] [Summoners_Incantation](challenges/Summoners_Incantation)
 - [ ] [Enchanted_Cipher](challenges/Enchanted_Cipher)
 - [ ] [Dragon_Fury](challenges/Dragon_Fury)
 - [ ] [Dragon_Flight](challenges/Dragon_Flight)
 - [ ] [ClockWork_Gurdian](challenges/ClockWork_Gurdian)
 
 ## Forensics
-- [ ] [Thorins_Amulet](challenges/Thorins_Amulet)
+- [x] [Thorins_Amulet](challenges/Thorins_Amulet)
 - [ ] [A_new_Hire](challenges/A_new_Hire)
 - [ ] [Silent_Trap](challenges/Silent_Trap)
 - [ ] [Stealth_Invasion](challenges/Stealth_Invasion)
