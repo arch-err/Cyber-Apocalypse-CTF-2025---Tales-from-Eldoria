@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title></title>
+<meta name='generator' content='Roundcube'><script>
+if (window.parent && parent.rcmail) {
+	parent.rcmail.iframe_loaded("loading1740159034795");
+	parent.rcmail.remove_compose_data("182422989367bc32a4e3913");
+	parent.rcmail.sent_successfully("confirmation","Message sent successfully.",["INBOX","Sent"],false);
+}
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

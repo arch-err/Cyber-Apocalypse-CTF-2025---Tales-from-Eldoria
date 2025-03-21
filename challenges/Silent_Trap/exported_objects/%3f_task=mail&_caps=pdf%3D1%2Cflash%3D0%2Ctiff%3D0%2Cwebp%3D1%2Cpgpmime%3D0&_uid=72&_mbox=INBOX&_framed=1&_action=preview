@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="en" class="iframe">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Roundcube Webmail :: Bug Report - In-game Imbalance Issue in Eldoria</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0"><meta name="theme-color" content="#f4f4f4"><meta name="msapplication-navbutton-color" content="#f4f4f4">
+	<link rel="shortcut icon" href="skins/elastic/images/favicon.ico?s=1640816963">
+	<link rel="stylesheet" href="skins/elastic/deps/bootstrap.min.css?s=1640817073">
+	
+		<link rel="stylesheet" href="skins/elastic/styles/styles.min.css?s=1640816963">
+		
+	
+	
+		<script>
+		try {
+			if (document.cookie.indexOf('colorMode=dark') > -1
+				|| (document.cookie.indexOf('colorMode=light') === -1 && window.matchMedia('(prefers-color-scheme: dark)').matches)
+			) {
+				document.documentElement.className += ' dark-mode';
+			}
+		} catch (e) { }
+		</script>
+	
+<link rel="stylesheet" type="text/css" href="plugins/jqueryui/themes/elastic/jquery-ui.min.css?s=1640816963"><script src="program/js/jquery.min.js?s=1640817055"></script><script src="program/js/common.min.js?s=1640816963"></script><script src="program/js/app.min.js?s=1640816963"></script><script>
+/*
+        @licstart  The following is the entire license notice for the 
+        JavaScript code in this page.
+
+        Copyright (C) The Roundcube Dev Team
+
+        The JavaScript code in this page is free software: you can redistribute
+        it and/or modify it under the terms of the GNU General Public License
+        as published by the Free Software Foundation, either version 3 of
+        the License, or (at your option) any later version.
+
+        The code is distributed WITHOUT ANY WARRANTY; without even the implied
+        warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+        See the GNU GPL for more details.
+
+        @licend  The above is the entire license notice
+        for the JavaScript code in this page.
+*/
+var rcmail = new rcube_webmail();
+rcmail.set_env({"task":"mail","standard_windows":false,"locale":"en_US","devel_mode":null,"rcversion":10502,"cookie_domain":"","cookie_path":"/","cookie_secure":false,"dark_mode_support":true,"skin":"elastic","framed":true,"blankpage":"skins/elastic/watermark.html","refresh_interval":60,"session_lifetime":600,"action":"preview","comm_path":"./?_task=mail&_framed=1","user_id":"cj6qi7cvz3FBlTkY","compose_extwin":false,"date_format":"yy-mm-dd","date_format_localized":"YYYY-MM-DD","browser_capabilities":{"pdf":"1","flash":"0","tiff":"0","webp":"1","pgpmime":"0"},"uid":"72","safemode":false,"message_context":null,"message_flags":[],"sender":"proplayer@email.com","mailbox":"INBOX","username":"devteam@korptech.net","permaurl":"./?_task=mail&_action=show&_uid=72&_mbox=INBOX","has_writeable_addressbook":true,"delimiter":".","mimetypes":["text/plain","text/html","image/jpeg","image/gif","image/png","image/bmp","image/webp","application/x-javascript","application/pdf","message/rfc822"],"read_when_deleted":true,"display_next":true,"drafts_mailbox":"Drafts","trash_mailbox":"Trash","junk_mailbox":"Junk","mailboxes":{"INBOX":{"id":"INBOX","name":"Inbox","virtual":false,"class":"inbox"},"Drafts":{"id":"Drafts","name":"Drafts","virtual":false,"class":"drafts"},"Sent":{"id":"Sent","name":"Sent","virtual":false,"class":"sent"},"Trash":{"id":"Trash","name":"Trash","virtual":false,"class":"trash"}},"mailboxes_list":["INBOX","Drafts","Sent","Trash"],"attachments":{"2":"application/zip"},"request_token":"hiJRTxCbHmwErcJPTYoNEr5QwI1CQINU"});
+rcmail.add_label({"loading":"Loading...","servererror":"Server Error!","connerror":"Connection Error (Failed to reach the server)!","requesttimedout":"Request timed out","refreshing":"Refreshing...","windowopenerror":"The popup window was blocked!","uploadingmany":"Uploading files...","uploading":"Uploading file...","close":"Close","save":"Save","cancel":"Cancel","alerttitle":"Attention","confirmationtitle":"Are you sure...","delete":"Delete","continue":"Continue","ok":"OK","checkingmail":"Checking for new messages...","deletemessage":"Delete message","movemessagetotrash":"Move message to trash","movingmessage":"Moving message(s)...","deletingmessage":"Deleting message(s)...","markingmessage":"Marking message(s)...","replyall":"Reply all","replylist":"Reply list","bounce":"Resend","bouncemsg":"Resend (bounce)","sendingmessage":"Sending message...","back":"Back","errortitle":"An error occurred!","options":"Options","plaintoggle":"Plain text","htmltoggle":"HTML","previous":"Previous","next":"Next","select":"Select","browse":"Browse","choosefile":"Choose file...","choosefiles":"Choose files...","purgefolderconfirm":"Do you really want to delete all messages in this folder?","deletemessagesconfirm":"Do you really want to delete selected message(s)?","details":"Details","summary":"Summary","arialabelmessageheaders":"Message headers"});
+rcmail.set_unread_message("72","INBOX");
+rcmail.gui_container("headerlinks","header-links");
+rcmail.gui_container("attachmentmenu","attachmentmenu");
+rcmail.gui_container("mailtomenu","mailto-menu");rcmail.register_button('extwin', 'rcmbtnfrm100', 'link', '', '', '');
+rcmail.gui_object('attachments', 'attachment-list');
+rcmail.gui_object('remoteobjectsmsg', 'remote-objects-message');
+rcmail.gui_object('messagebody', 'messagebody');
+rcmail.register_button('open-attachment', 'attachmenuopen', 'link', 'extwin active', '', '');
+rcmail.register_button('download-attachment', 'attachmenudownload', 'link', 'download active', '', '');
+rcmail.gui_object('message', 'messagestack');
+</script>
+
+<script src="plugins/jqueryui/js/jquery-ui.min.js?s=1640816963"></script>
+</head>
+<body class="task-mail action-preview">
+	
+
+
+
+
+
+<h1 class="voice">Message preview</h1>
+
+<div id="layout-content" class="selected">
+	
+	<div class="content frame-content" role="main">
+		<div id="message-header">
+			<h2 class="subject">
+				<span class="voice">Subject: </span>
+				Bug Report - In-game Imbalance Issue in Eldoria
+				
+					<a class="extwin" title="Open in new window" data-hidden="small" id="rcmbtnfrm100" role="button" href="./?_task=mail&amp;_action=show&amp;_uid=72&amp;_mbox=INBOX" onclick="return rcmail.command('extwin','',this,event)"><span class="inner">Open in new window</span></a>
+				
+			</h2>
+			<div class="header">
+				<img src="./?_task=addressbook&amp;_action=photo&amp;_email=proplayer%40email.com&amp;_error=1" alt="Contact photo" class="contactphoto" onerror="this.onerror = null; this.src = 'skins/elastic/images/contactpic.svg';">
+				<div class="header-content">
+					<div class="header-summary"><span>From <span class="adr"><a href="mailto:proplayer@email.com" class="rcmContactAddress" onclick="return rcmail.command('compose','proplayer@email.com',this)" title="proplayer@email.com">proplayer@email.com</a><a href="#add" title="Add to address book" class="rcmaddcontact" onclick="return rcmail.command('add-contact','proplayer@email.com',this)"></a></span> on <span class="text-nowrap">2025-02-24 15:46</span></span></div>
+					<table class="header-headers"><tbody><tr><td class="header-title">From</td><td class="header from"><span class="adr"><a href="mailto:proplayer@email.com" class="rcmContactAddress" onclick="return rcmail.command('compose','proplayer@email.com',this)" title="proplayer@email.com">proplayer@email.com</a><a href="#add" title="Add to address book" class="rcmaddcontact" onclick="return rcmail.command('add-contact','proplayer@email.com',this)"></a></span></td></tr><tr><td class="header-title">To</td><td class="header to"><span class="adr"><a href="mailto:devteam@korptech.net" class="rcmContactAddress" onclick="return rcmail.command('compose','devteam@korptech.net',this)" title="devteam@korptech.net">devteam@korptech.net</a><a href="#add" title="Add to address book" class="rcmaddcontact" onclick="return rcmail.command('add-contact','devteam@korptech.net',this)"></a></span></td></tr><tr><td class="header-title">Date</td><td class="header date">Today 15:46</td></tr></tbody></table>
+					<div class="header-links">
+						
+						
+						<a href="#headers" class="headers-summary" onclick="return UI.headers_show(true)"></a>
+						<a href="#all-headers" class="headers-all" onclick="return UI.headers_dialog()">Headers</a>
+						
+						
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="message-content">
+			<div class="leftcol" role="region" aria-labelledby="aria-label-messageattachments">
+				<h2 id="aria-label-messageattachments" class="voice">Attachments</h2>
+				<ul id="attachment-list" class="attachmentslist"><li class="application zip" id="attach2"><a href="./?_task=mail&amp;_action=get&amp;_mbox=INBOX&amp;_uid=72&amp;_token=hiJRTxCbHmwErcJPTYoNEr5QwI1CQINU&amp;_part=2" onclick="return rcmail.command('load-attachment','2',this)" onmouseover="rcube_webmail.long_subject_title_ex(this, 0)" title="" class="filename"><span class="attachment-name">Eldoria_Balance_Issue_Report.zip</span><span class="attachment-size">(~8 KB)</span></a></li></ul>
+			</div>
+			<div class="rightcol" role="region" aria-labelledby="aria-label-messagebody">
+				<h2 id="aria-label-messagebody" class="voice">Message Body</h2>
+				<div id="message-objects">
+<div id="remote-objects-message" class="notice" style="display: none"><span>To protect your privacy remote resources have been blocked.</span>&nbsp;<span class="boxbuttons"><a href="#loadremote" onclick="rcmail.command('load-remote')">Allow</a></span></div>
+</div>
+				<div id="messagebody"><div class="message-part" id="message-part1"><div class="pre"><span style="white-space:nowrap">Dear Eldoria Development Team,</span><br>
+<br>
+I hope this message finds you well. I’ve been playing *Tales from Eldoria* recently and have come across an in-game issue that I believe could impact the balance of gameplay for many players.<br>
+<br>
+It seems that there’s a small exploit within the in-game economy system that allows players to accumulate resources far too quickly. This results in some players being able to progress significantly faster than others, which is creating a rather unfair advantage.<br>
+<br>
+While this isn’t a game-breaking bug, it does affect the overall player experience and could lead to frustration among those who are not using the exploit. I’ve attached a PDF file with more details on how to reproduce the issue, as well as some suggestions for a fix. Archive password is eldoriaismylife<br>
+<br>
+Looking forward to seeing this fixed soon. Thanks for your hard work on the game!<br>
+<br>
+<span style="white-space:nowrap">Best regards,</span><br>
+<span style="white-space:nowrap">A concerned player</span></div></div></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- popup menus -->
+<div id="attachmentmenu" class="popupmenu">
+	<h3 id="aria-label-attachmentmenu" class="voice">Attachment options</h3>
+	<ul class="menu listing" role="menu" aria-labelledby="aria-label-attachmentmenu">
+		<li role="menuitem"><a id="attachmenuopen" class="extwin disabled" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('open-attachment','',this,event)">Open</a></li>
+		<li role="menuitem"><a id="attachmenudownload" class="download disabled" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('download-attachment','',this,event)">Download</a></li>
+		
+	</ul>
+</div>
+
+<div id="mailto-menu" class="popupmenu">
+	<h3 id="aria-label-mailtomenu" class="voice">Email address options</h3>
+	<ul class="menu listing" role="menu" aria-labelledby="aria-label-mailtomenu">
+		<li role="menuitem"><a class="addressbook" id="rcmbtnfrm101" role="button" tabindex="-1" aria-disabled="true" href="#">Add to address book</a></li>
+		<li role="menuitem"><a class="compose" id="rcmbtnfrm102" role="button" tabindex="-1" aria-disabled="true" href="#">Compose mail to</a></li>
+		
+	</ul>
+</div>
+
+
+
+<div id="messagestack"></div>
+<script>
+$(function() {
+rcmail.init();
+});
+</script>
+
+
+
+<script src="skins/elastic/deps/bootstrap.bundle.min.js?s=1640817073"></script>
+<script src="skins/elastic/ui.min.js?s=1640816963"></script>
+
+</body>
+</html>

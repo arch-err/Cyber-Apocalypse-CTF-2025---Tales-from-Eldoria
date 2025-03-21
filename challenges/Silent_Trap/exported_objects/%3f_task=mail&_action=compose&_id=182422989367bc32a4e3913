@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Roundcube Webmail :: Compose</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0"><meta name="theme-color" content="#f4f4f4"><meta name="msapplication-navbutton-color" content="#f4f4f4">
+	<link rel="shortcut icon" href="skins/elastic/images/favicon.ico?s=1640816963">
+	<link rel="stylesheet" href="skins/elastic/deps/bootstrap.min.css?s=1640817073">
+	
+		<link rel="stylesheet" href="skins/elastic/styles/styles.min.css?s=1640816963">
+		
+	
+	
+		<script>
+		try {
+			if (document.cookie.indexOf('colorMode=dark') > -1
+				|| (document.cookie.indexOf('colorMode=light') === -1 && window.matchMedia('(prefers-color-scheme: dark)').matches)
+			) {
+				document.documentElement.className += ' dark-mode';
+			}
+		} catch (e) { }
+		</script>
+	
+<link rel="stylesheet" type="text/css" href="plugins/jqueryui/themes/elastic/jquery-ui.min.css?s=1640816963"><script src="program/js/jquery.min.js?s=1640817055"></script><script src="program/js/common.min.js?s=1640816963"></script><script src="program/js/app.min.js?s=1640816963"></script><script src="program/js/publickey.min.js?s=1640817074"></script><script src="program/js/tinymce/tinymce.min.js?s=1624422060"></script><script src="program/js/editor.min.js?s=1640816963"></script><script src="program/js/list.min.js?s=1640816963"></script><script>
+/*
+        @licstart  The following is the entire license notice for the 
+        JavaScript code in this page.
+
+        Copyright (C) The Roundcube Dev Team
+
+        The JavaScript code in this page is free software: you can redistribute
+        it and/or modify it under the terms of the GNU General Public License
+        as published by the Free Software Foundation, either version 3 of
+        the License, or (at your option) any later version.
+
+        The code is distributed WITHOUT ANY WARRANTY; without even the implied
+        warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+        See the GNU GPL for more details.
+
+        @licend  The above is the entire license notice
+        for the JavaScript code in this page.
+*/
+var rcmail = new rcube_webmail();
+rcmail.set_env({"task":"mail","standard_windows":false,"locale":"en_US","devel_mode":null,"rcversion":10502,"cookie_domain":"","cookie_path":"/","cookie_secure":false,"dark_mode_support":true,"skin":"elastic","blankpage":"skins/elastic/watermark.html","refresh_interval":60,"session_lifetime":600,"action":"compose","comm_path":"./?_task=mail","user_id":"cj6qi7cvz3FBlTkY","compose_extwin":false,"date_format":"yy-mm-dd","date_format_localized":"YYYY-MM-DD","browser_capabilities":{"pdf":"1","flash":"0","tiff":"0","webp":"1","pgpmime":"0"},"compose_id":"182422989367bc32a4e3913","session_id":"be3nvsgu4q53eehkla8960pkob","mailbox":"INBOX","top_posting":false,"sig_below":false,"save_localstorage":true,"is_sent":false,"mimetypes":["text/plain","text/html","image/jpeg","image/gif","image/png","image/bmp","image/webp","application/x-javascript","application/pdf"],"keyservers":["https://keys.openpgp.org/"],"mailvelope_main_keyring":false,"drafts_mailbox":"Drafts","draft_autosave":300,"default_font":"Verdana,Geneva,sans-serif","default_font_size":"10pt","compose_mode":"reply","show_sig":true,"reply_msgid":"\u003C56fbb519c0d4fd901ad75cf19c8c9f36@email.com\u003E","max_disclosed_recipients":5,"max_filesize":2097152,"filesizeerror":"The uploaded file exceeds the maximum size of 2.0 MB.","max_filecount":"20","filecounterror":"You can upload maximum 20 files at once.","attachments":[],"filedrop":{"action":"upload","fieldname":"_attachments"},"signatures":[],"identities":{"6":{"email":"devteam@korptech.net"}},"autocomplete_max":15,"autocomplete_min_length":1,"composebody":"composebody","editor_config":{"mode":"","lang":"en","skin_path":"skins/elastic","spellcheck":0,"spelldict":0,"content_css":"skins/elastic/styles/embed.min.css","disabled_plugins":["spellchecker"],"disabled_buttons":[],"extra_plugins":[],"extra_buttons":[],"content_style":"body {font-family: Verdana,Geneva,sans-serif; font-size: 10pt;}"},"textresponses":[],"pagecount":0,"current_page":0,"request_token":"hiJRTxCbHmwErcJPTYoNEr5QwI1CQINU"});
+rcmail.add_label({"loading":"Loading...","servererror":"Server Error!","connerror":"Connection Error (Failed to reach the server)!","requesttimedout":"Request timed out","refreshing":"Refreshing...","windowopenerror":"The popup window was blocked!","uploadingmany":"Uploading files...","uploading":"Uploading file...","close":"Close","save":"Save","cancel":"Cancel","alerttitle":"Attention","confirmationtitle":"Are you sure...","delete":"Delete","continue":"Continue","ok":"OK","notuploadedwarning":"Not all attachments have been uploaded yet. Please wait or cancel the upload.","savingmessage":"Saving message...","siginserted":"Signature inserted successfully.","responseinserted":"Response inserted successfully.","messagesaved":"Message saved to Drafts.","converting":"Removing formatting...","editorwarning":"Switching editor type may cause text formatting to be lost. Do you wish to continue?","discard":"Discard","fileuploaderror":"File upload failed.","sendmessage":"Send message","newresponse":"Create new response","responsename":"Name","responsetext":"Response Text","savingresponse":"Saving response text...","restoresavedcomposedata":"A previously composed but unsent message was found.\n\nSubject: $subject\nSaved: $date\n\nDo you want to restore this message?","restoremessage":"Restore message?","restore":"Restore","ignore":"Ignore","selectimportfile":"Please select a file to upload.","messageissent":"The message was already sent, but not saved yet. Do you want to save it now?","loadingdata":"Loading data...","nopubkeyfor":"No valid public key found for $email","nopubkeyforsender":"No valid public key found for your sender identity. Do you want to encrypt the message for the recipients only?","encryptnoattachments":"Already uploaded attachments cannot be encrypted. Please re-add them in the encryption editor.","encryptedsendialog":"Sending encrypted message","searchpubkeyservers":"Do you want to search public key servers for the missing keys?","importpubkeys":"Import public keys","encryptpubkeysfound":"The following public keys have been found:","search":"Search","import":"Import","keyid":"Key ID","keylength":"Bits","keyexpired":"Expired","keyrevoked":"Revoked","keyimportsuccess":"Public key $key successfully imported into your keyring.","keyservererror":"Failed to get key from keyserver.","attaching":"Attaching file...","namex":"Name","attachmentrename":"Rename attachment","nosubject":"(no subject)","nosenderwarning":"Please enter sender email address.","norecipientwarning":"Please enter at least one recipient.","nosubjectwarning":"The \"Subject\" field is empty. Would you like to enter one now?","nobodywarning":"Send this message without text?","notsentwarning":"The message has not been sent and has unsaved changes. Do you want to discard your changes?","sendingmessage":"Sending message...","searching":"Searching...","disclosedrecipwarning":"All recipients will see each others e-mail addresses. To prevent this and protect their privacy you can use the Bcc field.","disclosedreciptitle":"Too many public recipients","bccinstead":"Use Bcc","nosubjecttitle":"No subject","back":"Back","errortitle":"An error occurred!","options":"Options","plaintoggle":"Plain text","htmltoggle":"HTML","previous":"Previous","next":"Next","select":"Select","browse":"Browse","choosefile":"Choose file...","choosefiles":"Choose files...","darkmode":"Dark mode","lightmode":"Light mode","recipientsadded":"Recipient(s) added successfully.","nocontactselected":"You have not selected a contact yet.","recipient":"Recipient","insert":"Insert","insertcontact":"Insert contact(s)","recipientedit":"Recipient edit","uploadprogress":"$percent ($current of $total)","GB":"GB","MB":"MB","KB":"KB","B":"B","autocompletechars":"Enter at least $min characters for autocompletion.","autocompletemore":"More matching entries found. Please type more characters.","selectimage":"Select image","addimage":"Add image","selectmedia":"Select movie","addmedia":"Add movie"});
+rcmail.gui_container("taskbar","taskmenu");
+rcmail.gui_container("composeoptions","compose-options");
+rcmail.gui_container("toolbar","compose-toolbar");
+rcmail.gui_container("attachmentmenu","attachmentoptionsmenu");rcmail.register_button('compose', 'rcmbtn100', 'link', '', '', '');
+rcmail.register_button('mail', 'rcmbtn101', 'link', '', '', '');
+rcmail.register_button('addressbook', 'rcmbtn102', 'link', '', 'contacts selected', '');
+rcmail.register_button('settings', 'rcmbtn103', 'link', '', 'settings selected', '');
+rcmail.register_button('logout', 'rcmbtn106', 'link', '', '', '');
+rcmail.gui_object('attachmentlist', 'attachment-list');
+rcmail.gui_object('filedrop', 'compose-attachments');
+rcmail.register_button('savedraft', 'rcmbtn107', 'link', 'save draft', '', '');
+rcmail.register_button('insert-sig', 'rcmbtn109', 'link', 'signature', '', '');
+rcmail.register_button('compose-encrypted', 'rcmbtn110', 'link', 'encrypt', 'encrypt selected', '');
+rcmail.gui_object('messageform', 'form');
+rcmail.register_button('send', 'rcmbtn111', 'button', '', '', '');
+rcmail.register_button('extwin', 'rcmbtn112', 'link', '', '', '');
+rcmail.gui_object('uploadform', 'uploadformFrm');
+rcmail.gui_object('responseslist', 'responseslist');
+rcmail.register_button('save-response', 'rcmbtn113', 'link', 'create responses active', '', '');
+rcmail.register_button('open-attachment', 'attachmenuopen', 'link', 'extwin active', '', '');
+rcmail.register_button('download-attachment', 'attachmenudownload', 'link', 'download active', '', '');
+rcmail.register_button('rename-attachment', 'attachmenurename', 'link', 'rename active', '', '');
+rcmail.register_button('compose-encrypted', 'rcmbtn115', 'link', 'encrypt active', '', '');
+rcmail.register_button('compose-encrypted-signed', 'rcmbtn116', 'link', 'encrypt sign active', '', '');
+rcmail.gui_object('qsearchbox', 'searchform');
+rcmail.register_button('reset-search', 'rcmbtn118', 'link', '', '', '');
+rcmail.gui_object('addressbookslist', 'directorylist');
+rcmail.gui_object('contactslist', 'contacts-table');
+rcmail.register_button('firstpage', 'rcmbtn119', 'link', 'firstpage', '', '');
+rcmail.register_button('previouspage', 'rcmbtn120', 'link', 'prevpage', '', '');
+rcmail.register_button('nextpage', 'rcmbtn121', 'link', 'nextpage', '', '');
+rcmail.register_button('lastpage', 'rcmbtn122', 'link', 'lastpage', '', '');
+rcmail.gui_object('message', 'messagestack');
+</script>
+
+<script src="plugins/jqueryui/js/jquery-ui.min.js?s=1640816963"></script>
+</head>
+<body class="task-mail action-compose">
+	
+		<div id="layout">
+	
+
+<div id="layout-menu">
+	<h2 id="aria-label-tasknav" class="voice">Application tasks</h2>
+	<div class="popover-header">
+		<img src="skins/elastic/images/logo.svg?s=1640816963" id="logo" alt="Logo">
+		<a class="button icon cancel"><span class="inner">Close</span></a>
+	</div>
+	<div id="taskmenu" class="menu toolbar" role="navigation" aria-labelledby="aria-label-tasknav">
+		<span class="action-buttons">
+			
+				<a class="compose selected" title="Create a new message" id="rcmbtn100" role="button" href="./?_task=mail&amp;_action=compose" onclick="return rcmail.command('compose','',this,event)"><span class="inner">Compose</span></a>
+			
+		</span>
+		
+			<a class="mail" id="rcmbtn101" role="button" href="./?_task=mail" onclick="return rcmail.command('switch-task','mail',this,event)"><span class="inner">Mail</span></a>
+		
+		<a class="contacts" id="rcmbtn102" role="button" href="./?_task=addressbook" onclick="return rcmail.command('switch-task','addressbook',this,event)"><span class="inner">Contacts</span></a>
+		
+		<a class="settings" id="rcmbtn103" role="button" href="./?_task=settings" onclick="return rcmail.command('switch-task','settings',this,event)"><span class="inner">Settings</span></a>
+		<span class="special-buttons">
+			
+				
+				
+				<a class="theme dark" id="rcmbtn104" role="button" href="#"><span class="inner">Dark mode</span></a>
+			
+			<a class="about" onclick="UI.about_dialog(this)" id="rcmbtn105" role="button" href="#"><span class="inner">About</span></a>
+			<a class="logout" id="rcmbtn106" role="button" href="./?_task=logout" onclick="return rcmail.command('switch-task','logout',this,event)"><span class="inner">Logout</span></a>
+		</span>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<h1 class="voice">Compose</h1>
+
+<!-- compose options and attachments list -->
+<div id="layout-sidebar" class="listbox sidebar-right">
+	<div class="header">
+		<a class="button icon back-content-button" href="#content" data-hidden="big"><span class="inner">Back</span></a>
+		<span class="header-title all-sizes">Options and attachments</span>
+	</div>
+	<div class="scroller">
+		<!-- attachments -->
+		<div id="compose-attachments" class="file-upload" role="region" aria-labelledby="aria-label-compose-attachments">
+			<h2 id="aria-label-compose-attachments" class="voice">Attachments</h2>
+			<div class="upload-form">
+				<div class="hint">Maximum allowed file size is 2.0 MB</div>
+				<button type="button" class="btn btn-secondary attach" tabindex="2" onclick="rcmail.upload_input('uploadform')">Attach a file</button>
+			</div>
+			<ul id="attachment-list" class="attachmentslist" data-tabindex="2"></ul>
+			
+		</div>
+		<!-- compose options -->
+		<div id="compose-options" class="formcontent" role="region" aria-labelledby="aria-label-composeoptions">
+			<h2 id="aria-label-composeoptions" class="voice">Composition options</h2>
+			
+			
+			<div class="form-group row form-check">
+				<label for="compose-mdn" class="col-form-label col-6">Return receipt</label>
+				<div class="col-6 form-check">
+					<input name="_mdn" id="compose-mdn" tabindex="2" class="form-check-input" value="1" type="checkbox">
+				</div>
+			</div>
+			
+			
+			<div class="form-group row form-check">
+				<label for="compose-dsn" class="col-form-label col-6">Delivery status notification</label>
+				<div class="col-6 form-check">
+					<input name="_dsn" id="compose-dsn" tabindex="2" class="form-check-input" value="1" type="checkbox">
+				</div>
+			</div>
+			
+			<div class="form-group row">
+				<label for="compose-priority" class="col-form-label col-6">Priority</label>
+				<div class="col-6">
+					<select name="_priority" id="compose-priority" tabindex="2" class="custom-select">
+<option value="5">Lowest</option><option value="4">Low</option><option value="0" selected>Normal</option><option value="2">High</option><option value="1">Highest</option></select>
+				</div>
+			</div>
+			
+			<div class="form-group row">
+				<label for="compose-store-target" class="col-form-label col-6">Save sent message in</label>
+				<div class="col-6">
+					<select name="_store_target" id="compose-store-target" tabindex="2" class="custom-select">
+<option value="">- don't save -</option><option value="INBOX">Inbox</option><option value="Drafts">Drafts</option><option value="Sent" selected>Sent</option><option value="Trash">Trash</option></select>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<div id="layout-content" class="listbox selected" role="main">
+	<h2 id="aria-label-toolbar" class="voice">Application toolbar</h2>
+	<div class="header">
+		<a class="button icon task-menu-button" href="#menu"><span class="inner">Menu</span></a>
+		<span class="header-title">Compose</span>
+		<div id="composestatusbar" class="position-absolute"></div>
+		<!-- toolbar -->
+		<div id="messagetoolbar" class="toolbar menu" role="toolbar" aria-labelledby="aria-label-toolbar">
+			<a class="options" href="#options" onclick="UI.show_sidebar()" data-hidden="big">
+				<span class="inner">Options and attachments</span>
+			</a>
+			<a class="save draft disabled" title="Save as draft" tabindex="-1" data-content-button="true" id="rcmbtn107" role="button" data-tabindex="2" aria-disabled="true" href="#" onclick="return rcmail.command('savedraft','',this,event)"><span class="inner">Save</span></a>
+			<span class="spacer"></span>
+			<a class="attach" title="Attach a file" data-hidden="small" onclick="if (!$(this).is('.disabled')) rcmail.upload_input('uploadform')" aria-haspopup="true" aria-expanded="false" tabindex="2" id="rcmbtn108" role="button" href="#"><span class="inner">Attach</span></a>
+			<a class="signature disabled" title="Insert signature" tabindex="-1" id="rcmbtn109" role="button" data-tabindex="2" aria-disabled="true" href="#" onclick="return rcmail.command('insert-sig','',this,event)"><span class="inner">Signature</span></a>
+			<a href="#responses" class="responses" label="responses" title="Insert a response" unselectable="on" tabindex="2" data-popup="responses-menu">
+				<span class="inner">Responses</span>
+			</a>
+			
+			<span class="dropbutton" style="display:none">
+				<a class="encrypt disabled" title="Encrypt message with Mailvelope" tabindex="-1" id="rcmbtn110" role="button" data-tabindex="2" aria-disabled="true" href="#" onclick="return rcmail.command('compose-encrypted','',this,event)"><span class="inner">Encrypt</span></a>
+				<a href="#encryption" id="encryption-menu-button" class="dropdown" tabindex="2" data-popup="encryption-menu">
+					<span class="inner">Encrypt message with Mailvelope</span>
+				</a>
+			</span>
+			
+		</div>
+	</div>
+	<div id="compose-content" class="formcontainer content">
+		<form name="form" method="post" class="formcontent scroller" action="./?_task=mail">
+<input type="hidden" name="_token" value="hiJRTxCbHmwErcJPTYoNEr5QwI1CQINU"><input type="hidden" name="_task" value="mail"><input type="hidden" name="_action" value="send"><input type="hidden" name="_id" value="182422989367bc32a4e3913"><input type="hidden" name="_attachments">
+		
+		<!-- message headers -->
+		<div id="compose-headers" role="region" aria-labelledby="aria-label-composeheaders">
+			<h2 id="aria-label-composeheaders" class="voice">Message headers</h2>
+			<div class="compose-headers">
+				<div id="compose_from" class="form-group row">
+					<label for="_from" class="col-2 col-form-label">From</label>
+					<div class="col-10">
+						<div class="input-group">
+							<select name="_from" id="_from" tabindex="1" class="form-control" onchange="rcmail.change_identity(this)">
+<option value="6" selected>devteam@korptech.net</option></select>
+							<span class="input-group-append">
+								<a href="#identities" onclick="return rcmail.command('switch-task', 'settings/identities')" class="input-group-text icon edit" title="Edit identities" tabindex="1"><span class="inner">Edit identities</span></a>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div id="compose_to" class="form-group row">
+					<label for="_to" class="col-2 col-form-label">To</label>
+					<div class="col-10">
+						<div class="input-group">
+							<textarea name="_to" spellcheck="false" id="_to" tabindex="1" data-recipient-input="true">shadowblade@email.com</textarea>
+							<span class="input-group-append">
+								<a href="#add-contact" onclick="UI.recipient_selector('to')" class="input-group-text icon add recipient" title="Add contact" tabindex="1"><span class="inner">Add contact</span></a>
+							</span>
+							<span class="input-group-append">
+								<a href="#add-header" data-popup="headers-menu" class="input-group-text icon add" title="Add recipient (header)" tabindex="1"><span class="inner">Add recipient (header)</span></a>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div id="compose_cc" class="hidden form-group row">
+					<label for="_cc" class="col-2 col-form-label">Cc</label>
+					<div class="col-10">
+						<div class="input-group">
+							<textarea name="_cc" spellcheck="false" id="_cc" tabindex="1" data-recipient-input="true"></textarea>
+							<span class="input-group-append">
+								<a href="#add-contact" onclick="UI.recipient_selector('cc')" class="input-group-text icon add recipient" title="Add contact" tabindex="1"><span class="inner">Add contact</span></a>
+							</span>
+							<span class="input-group-append">
+								<a href="#delete" onclick="UI.header_reset('_cc')" class="input-group-text icon delete" title="Delete" tabindex="1"><span class="inner">Delete</span></a>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div id="compose_bcc" class="hidden form-group row">
+					<label for="_bcc" class="col-2 col-form-label">Bcc</label>
+					<div class="col-10">
+						<div class="input-group">
+							<textarea name="_bcc" spellcheck="false" id="_bcc" tabindex="1" data-recipient-input="true"></textarea>
+							<span class="input-group-append">
+								<a href="#add-contact" onclick="UI.recipient_selector('bcc')" class="input-group-text icon add recipient" title="Add contact" tabindex="1"><span class="inner">Add contact</span></a>
+							</span>
+							<span class="input-group-append">
+								<a href="#delete" onclick="UI.header_reset('_bcc')" class="input-group-text icon delete" title="Delete" tabindex="1"><span class="inner">Delete</span></a>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div id="compose_replyto" class="hidden form-group row">
+					<label for="_replyto" class="col-2 col-form-label">Reply-To</label>
+					<div class="col-10">
+						<div class="input-group">
+							<input name="_replyto" spellcheck="false" id="_replyto" tabindex="1" data-recipient-input="true" value="" type="text">
+							<span class="input-group-append">
+								<a href="#add-contact" onclick="UI.recipient_selector('replyto')" class="input-group-text icon add recipient" title="Add contact" tabindex="1"><span class="inner">Add contact</span></a>
+							</span>
+							<span class="input-group-append">
+								<a href="#delete" onclick="UI.header_reset('_replyto')" class="input-group-text icon delete" title="Delete" tabindex="1"><span class="inner">Delete</span></a>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div id="compose_followupto" class="hidden form-group row">
+					<label for="_followupto" class="col-2 col-form-label">Followup-To</label>
+					<div class="col-10">
+						<div class="input-group">
+							<input name="_followupto" spellcheck="false" id="_followupto" tabindex="1" data-recipient-input="true" value="" type="text">
+							<span class="input-group-append">
+								<a href="#add-contact" onclick="UI.recipient_selector('followupto')" class="input-group-text icon add recipient" title="Add contact" tabindex="1"><span class="inner">Add contact</span></a>
+							</span>
+							<span class="input-group-append">
+								<a href="#delete" onclick="UI.header_reset('_followupto')" class="input-group-text icon delete" title="Delete" tabindex="1"><span class="inner">Delete</span></a>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div id="compose_subject" class="form-group row">
+					<label for="compose-subject" class="col-2 col-form-label">Subject</label>
+					<div class="col-10">
+						<input name="_subject" id="compose-subject" tabindex="1" class="form-control" spellcheck="true" value="Re: Game Crash on Level 5" type="text">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- message compose body -->
+		<div id="composebodycontainer">
+			<label for="composebody" class="voice">Message Body</label>
+			
+<input type="hidden" name="_draft_saveid"><input type="hidden" name="_draft" value=""><input type="hidden" name="_is_html" value="0"><input type="hidden" name="_framed" value="1">
+<textarea name="_message" id="composebody" cols="70" rows="20" class="form-control" tabindex="1" data-html-editor="1">On 2025-02-24 15:33, shadowblade@email.com wrote:
+&gt; Hello Support Team,
+&gt; 
+&gt; I’m experiencing a crash issue in the game “Tales from Eldoria” Every
+&gt; time I enter Level 5, the game suddenly freezes and then shuts down. I
+&gt; have reinstalled the game and verified my system requirements, but the
+&gt; problem persists.
+&gt; 
+&gt; Could you please investigate this issue? I’m happy to provide
+&gt; additional logs or system details if needed.
+&gt; 
+&gt; Thank you for your assistance.
+&gt; 
+&gt; Best regards,
+&gt; shadowblade
+</textarea>
+			
+			<select name="editorSelector" id="editor-selector" class="hidden" onchange="return rcmail.command('toggle-editor', {id: 'composebody', html: this.value == 'html'}, '', event)">
+<option value="html">HTML</option><option value="plain" selected>Plain text</option></select>
+			
+		</div>
+		</form>
+		<div class="formbuttons">
+			<button class="btn btn-primary send" tabindex="1" data-content-button="true" type="button" id="rcmbtn111" onclick="return rcmail.command('send','',this,event)" value="Send" disabled>Send</button>
+			<div class="float-right">
+				<a data-hidden="small" class="button icon btn btn-link extwin" data-tabindex="1" id="rcmbtn112" role="button" href="#" onclick="return rcmail.command('extwin','',this,event)">Open in new window</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="uploadform"><form id="uploadformFrm" name="uploadform" method="post" enctype="multipart/form-data" class="smart-upload" action="./?_task=mail">
+<input type="hidden" name="_token" value="hiJRTxCbHmwErcJPTYoNEr5QwI1CQINU"><input multiple id="uploadformInput" type="file" name="_attachments[]" class="smart-upload" onchange="rcmail.command('send-attachment', this.form); this.value=null" tabindex="-1"></form></div>
+
+<div id="spell-menu" class="popupmenu" data-popup-init="spellmenu"></div>
+
+<div id="headers-menu" class="popupmenu" data-popup-init="headersmenu">
+	<h3 id="aria-label-headersmenu" class="voice">Recipient (header) adding menu</h3>
+	<ul class="menu listing" role="menu" aria-labelledby="aria-label-headersmenu">
+		<li role="menuitem"><a data-target="cc" href="#" role="button" tabindex="-1" class="recipient active">Cc</a></li>
+		<li role="menuitem"><a data-target="bcc" href="#" role="button" tabindex="-1" class="recipient active">Bcc</a></li>
+		<li role="menuitem"><a data-target="replyto" href="#" role="button" tabindex="-1" class="recipient active">Reply-To</a></li>
+		<li role="menuitem"><a data-target="followupto" href="#" role="button" tabindex="-1" class="recipient active">Followup-To</a></li>
+	</ul>
+</div>
+
+<div id="responses-menu" class="popupmenu">
+	<h3 id="aria-label-responsesmenu" class="voice">Canned responses menu</h3>
+	<ul class="menu listing" role="menu" aria-labelledby="aria-label-responsesmenu">
+		<li role="separator" class="separator"><label>Insert a response</label></li>
+		<ul id="responseslist" class="rounded-0"><li><a href="#" class="insertresponse placeholder disabled" unselectable="on" tabindex="0" aria-disabled="true">No responses available</a></li></ul>
+		<li role="separator" class="separator"><label>Manage responses</label></li>
+		<li role="menuitem"><a class="create responses disabled" unselectable="on" id="rcmbtn113" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('save-response','',this,event)">Create new response</a></li>
+		<li role="menuitem"><a class="edit responses active" onclick="return rcmail.command('switch-task', 'settings/responses')" id="rcmbtn114" role="button" href="#">Edit responses</a></li>
+	</ul>
+</div>
+
+<div id="attachmentmenu" class="popupmenu">
+	<h3 id="aria-label-attachmentmenu" class="voice">Attachment options</h3>
+	<ul class="menu listing" role="menu" aria-labelledby="aria-label-attachmentmenu">
+		<li role="menuitem"><a id="attachmenuopen" class="extwin disabled" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('open-attachment','',this,event)">Open</a></li>
+		<li role="menuitem"><a id="attachmenudownload" class="download disabled" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('download-attachment','',this,event)">Download</a></li>
+		<li role="menuitem"><a id="attachmenurename" class="rename disabled" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('rename-attachment','',this,event)">Rename</a></li>
+		
+	</ul>
+</div>
+
+<div id="encryption-menu" class="popupmenu">
+	<ul class="menu listing" role="menu">
+		<li role="menuitem"><a class="encrypt disabled" id="rcmbtn115" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('compose-encrypted','',this,event)">Encrypt message</a></li>
+		<li role="menuitem"><a class="encrypt sign disabled" id="rcmbtn116" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('compose-encrypted-signed','',this,event)">Encrypt and sign</a></li>
+	</ul>
+</div>
+
+<div id="recipient-dialog" class="popupmenu" role="region" aria-labelledby="aria-label-composecontacts">
+	<div class="listbox">
+		<div role="search" aria-labelledby="aria-label-contactsearchform" class="searchbar menu"><h2 id="aria-label-contactsearchform" class="voice">Contacts search form</h2><form name="rcmqsearchform" onsubmit="rcmail.command('search'); return false" action="./?_task=mail" method="get"><label for="searchform" class="voice">Search terms</label><input name="_q" id="searchform" class="no-bs no-bs" placeholder="Search..." type="text"></form>
+<a class="button reset" title="Reset search" tabindex="0" id="rcmbtn118" role="button" href="#" onclick="return rcmail.command('reset-search','',this,event)"><span class="inner">Reset search</span></a>
+
+<a href="#search" class="button search" title="Find contacts" tabindex="0" id="rcmbtn117" role="button"><span class="inner">Find contacts</span></a></div>
+		<div class="scroller" tabindex="-1">
+			<ul id="directorylist" class="treelist listing iconized"><li id="rcmliMA" class="addressbook"><a href="#list" rel="0" onclick="return rcmail.command('list-addresses','0',this)">Personal Addresses</a></li><li id="rcmliMQ" class="addressbook"><a href="#list" rel="1" onclick="return rcmail.command('list-addresses','1',this)">Collected Recipients</a></li><li id="rcmliMg" class="addressbook"><a href="#list" rel="2" onclick="return rcmail.command('list-addresses','2',this)">Trusted Senders</a></li></ul>
+			<table id="contacts-table" class="listing iconized contactlist" role="listbox" data-list="contact_list" data-list-select-replace="#recipient-dialog .pagenav-text"><tbody></tbody></table>
+		</div>
+		<div class="pagenav menu footer small" role="toolbar" aria-label="List navigation">
+	<a class="firstpage disabled" title="Show first page" id="rcmbtn119" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('firstpage','',this,event)"><span class="inner">First</span></a>
+	<a class="prevpage disabled" title="Show previous page" id="rcmbtn120" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('previouspage','',this,event)"><span class="inner">Previous</span></a>
+	
+		<span class="pagenav-text" aria-live="polite" aria-relevant="text">&nbsp;</span>
+	
+	<a class="nextpage disabled" title="Show next page" id="rcmbtn121" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('nextpage','',this,event)"><span class="inner">Next</span></a>
+	<a class="lastpage disabled" title="Show last page" id="rcmbtn122" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('lastpage','',this,event)"><span class="inner">Last</span></a>
+</div>
+
+	</div>
+</div>
+
+
+</div>
+
+
+
+<div id="messagestack"></div>
+<script>
+$(function() {
+rcmail.init();
+});
+</script>
+
+
+
+<script src="skins/elastic/deps/bootstrap.bundle.min.js?s=1640817073"></script>
+<script src="skins/elastic/ui.min.js?s=1640816963"></script>
+
+</body>
+</html>

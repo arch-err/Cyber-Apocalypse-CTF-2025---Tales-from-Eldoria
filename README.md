@@ -27,7 +27,7 @@
 **Team:** KlokaIndivider
 
 
-**Flags:** (0/0)
+**Flags:** (0/62)
 
 ![ ](assets/scoreboard.png)
 ![ ](assets/team-score.png)
@@ -35,14 +35,86 @@
 
 # Challenges
 
+## Blockchain
+- [ ] [Eldorion](challenges/Eldorion)
+- [ ] [HeliosDEX](challenges/HeliosDEX)
+- [ ] [EldoriaGate](challenges/EldoriaGate)
+
 ## Web
-
-## Pwn
-
-## Misc
-
-## Reverse Engineering
+- [ ] [Trial_by_Fire](challenges/Trial_by_Fire)
+- [ ] [Whispers_of_the_Moonbeam](challenges/Whispers_of_the_Moonbeam)
+- [ ] [Cyber_Attack](challenges/Cyber_Attack)
+- [ ] [Eldoria_Panel](challenges/Eldoria_Panel)
+- [ ] [Eldoria_Realms](challenges/Eldoria_Realms)
+- [ ] [Aurors_Archive](challenges/Aurors_Archive)
 
 ## OSINT
+- [ ] [Echoes_in_Stone](challenges/Echoes_in_Stone)
+- [ ] [The_Stone_That_Whispers](challenges/The_Stone_That_Whispers)
+- [ ] [The_Hillside_Haven](challenges/The_Hillside_Haven)
+- [ ] [The_Mechanical_Birds_Nest](challenges/The_Mechanical_Birds_Nest)
+- [ ] [The_Poisoned_Scroll](challenges/The_Poisoned_Scroll)
+- [ ] [The_Shadowed_Sigil](challenges/The_Shadowed_Sigil)
+- [ ] [The_Ancient_Citadel](challenges/The_Ancient_Citadel)
 
-## Hardware
+## Coding
+- [ ] [Summoners_Incantation](challenges/Summoners_Incantation)
+- [ ] [Enchanted_Cipher](challenges/Enchanted_Cipher)
+- [ ] [Dragon_Fury](challenges/Dragon_Fury)
+- [ ] [Dragon_Flight](challenges/Dragon_Flight)
+- [ ] [ClockWork_Gurdian](challenges/ClockWork_Gurdian)
+
+## Forensics
+- [ ] [Thorins_Amulet](challenges/Thorins_Amulet)
+- [ ] [A_new_Hire](challenges/A_new_Hire)
+- [ ] [Silent_Trap](challenges/Silent_Trap)
+- [ ] [Stealth_Invasion](challenges/Stealth_Invasion)
+- [ ] [Cave_Expedition](challenges/Cave_Expedition)
+- [ ] [ToolPie](challenges/ToolPie)
+- [ ] [Tales_for_the_Brave](challenges/Tales_for_the_Brave)
+
+## Pwn
+- [ ] [Quack_Quack](challenges/Quack_Quack)
+- [ ] [Blessing](challenges/Blessing)
+- [ ] [Crossbow](challenges/Crossbow)
+- [ ] [Laconic](challenges/Laconic)
+- [ ] [Contractor](challenges/Contractor)
+- [ ] [Strategist](challenges/Strategist)
+- [ ] [Vault](challenges/Vault)
+
+## Reversing
+- [ ] [SealedRune](challenges/SealedRune)
+- [ ] [EncryptedScroll](challenges/EncryptedScroll)
+- [ ] [EndlessCycle](challenges/EndlessCycle)
+- [ ] [Impossimaze](challenges/Impossimaze)
+- [ ] [Singlestep](challenges/Singlestep)
+- [ ] [Heart_Protector](challenges/Heart_Protector)
+- [ ] [Gateway](challenges/Gateway)
+
+## Crypto
+- [ ] [Traces](challenges/Traces)
+- [ ] [Kewiri](challenges/Kewiri)
+- [ ] [Prelim](challenges/Prelim)
+- [ ] [Hourcle](challenges/Hourcle)
+- [ ] [Copperbox](challenges/Copperbox)
+- [ ] [Verilicious](challenges/Verilicious)
+- [ ] [Twin_Oracles](challenges/Twin_Oracles)
+
+## Secure Coding
+- [ ] [Arcane_Auctions](challenges/Arcane_Auctions)
+- [ ] [Stoneforges_Domain](challenges/Stoneforges_Domain)
+- [ ] [Lyras_Tavern](challenges/Lyras_Tavern)
+
+## AI
+- [ ] [Lunar_Orb](challenges/Lunar_Orb)
+- [ ] [Mirror_Witch](challenges/Mirror_Witch)
+- [ ] [Embassy](challenges/Embassy)
+- [ ] [Elixir_Emporium](challenges/Elixir_Emporium)
+- [ ] [Cursed_GateKeeper](challenges/Cursed_GateKeeper)
+
+## ML
+- [ ] [Enchanted_Weights](challenges/Enchanted_Weights)
+- [ ] [Crystal_Corruption](challenges/Crystal_Corruption)
+- [ ] [Wasteland](challenges/Wasteland)
+- [ ] [Malakars_Deception](challenges/Malakars_Deception)
+- [ ] [Reverse_Prompt](challenges/Reverse_Prompt)
