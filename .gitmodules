@@ -1,0 +1,9 @@
+[submodule "challenges/Eldorion/multiattacker/lib/forge-std"]
+	path = challenges/Eldorion/multiattacker/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "challenges/HeliosDEX/helios-exploit/lib/forge-std"]
+	path = challenges/HeliosDEX/helios-exploit/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "challenges/HeliosDEX/multibuy/lib/forge-std"]
+	path = challenges/HeliosDEX/multibuy/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
