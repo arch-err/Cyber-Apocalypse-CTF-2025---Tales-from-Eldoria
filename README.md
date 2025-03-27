@@ -27,7 +27,7 @@
 **Team:** KlokaIndivider
 
 
-**Flags:** (3/62)
+**Flags:** (35/62)
 
 ![ ](assets/scoreboard.png)
 ![ ](assets/team-score.png)
@@ -36,12 +36,12 @@
 # Challenges
 
 ## Blockchain
-- [ ] [Eldorion](challenges/Eldorion)
-- [ ] [HeliosDEX](challenges/HeliosDEX)
-- [ ] [EldoriaGate](challenges/EldoriaGate)
+- [x] [Eldorion](challenges/Eldorion)
+- [x] [HeliosDEX](challenges/HeliosDEX)
+- [x] [EldoriaGate](challenges/EldoriaGate)
 
 ## Web
-- [ ] [Trial_by_Fire](challenges/Trial_by_Fire)
+- [x] [Trial_by_Fire](challenges/Trial_by_Fire)
 - [x] [Whispers_of_the_Moonbeam](challenges/Whispers_of_the_Moonbeam)
 - [ ] [Cyber_Attack](challenges/Cyber_Attack)
 - [ ] [Eldoria_Panel](challenges/Eldoria_Panel)
@@ -49,33 +49,33 @@
 - [ ] [Aurors_Archive](challenges/Aurors_Archive)
 
 ## OSINT
-- [ ] [Echoes_in_Stone](challenges/Echoes_in_Stone)
-- [ ] [The_Stone_That_Whispers](challenges/The_Stone_That_Whispers)
+- [x] [Echoes_in_Stone](challenges/Echoes_in_Stone)
+- [x] [The_Stone_That_Whispers](challenges/The_Stone_That_Whispers)
 - [ ] [The_Hillside_Haven](challenges/The_Hillside_Haven)
-- [ ] [The_Mechanical_Birds_Nest](challenges/The_Mechanical_Birds_Nest)
-- [ ] [The_Poisoned_Scroll](challenges/The_Poisoned_Scroll)
-- [ ] [The_Shadowed_Sigil](challenges/The_Shadowed_Sigil)
-- [ ] [The_Ancient_Citadel](challenges/The_Ancient_Citadel)
+- [x] [The_Mechanical_Birds_Nest](challenges/The_Mechanical_Birds_Nest)
+- [x] [The_Poisoned_Scroll](challenges/The_Poisoned_Scroll)
+- [x] [The_Shadowed_Sigil](challenges/The_Shadowed_Sigil)
+- [x] [The_Ancient_Citadel](challenges/The_Ancient_Citadel)
 
 ## Coding
 - [x] [Summoners_Incantation](challenges/Summoners_Incantation)
-- [ ] [Enchanted_Cipher](challenges/Enchanted_Cipher)
-- [ ] [Dragon_Fury](challenges/Dragon_Fury)
-- [ ] [Dragon_Flight](challenges/Dragon_Flight)
-- [ ] [ClockWork_Gurdian](challenges/ClockWork_Gurdian)
+- [x] [Enchanted_Cipher](challenges/Enchanted_Cipher)
+- [x] [Dragon_Fury](challenges/Dragon_Fury)
+- [x] [Dragon_Flight](challenges/Dragon_Flight)
+- [x] [ClockWork_Gurdian](challenges/ClockWork_Gurdian)
 
 ## Forensics
 - [x] [Thorins_Amulet](challenges/Thorins_Amulet)
-- [ ] [A_new_Hire](challenges/A_new_Hire)
-- [ ] [Silent_Trap](challenges/Silent_Trap)
+- [x] [A_new_Hire](challenges/A_new_Hire)
+- [/] [Silent_Trap](challenges/Silent_Trap)
 - [ ] [Stealth_Invasion](challenges/Stealth_Invasion)
 - [ ] [Cave_Expedition](challenges/Cave_Expedition)
-- [ ] [ToolPie](challenges/ToolPie)
+- [x] [ToolPie](challenges/ToolPie)
 - [ ] [Tales_for_the_Brave](challenges/Tales_for_the_Brave)
 
 ## Pwn
-- [ ] [Quack_Quack](challenges/Quack_Quack)
-- [ ] [Blessing](challenges/Blessing)
+- [x] [Quack_Quack](challenges/Quack_Quack)
+- [x] [Blessing](challenges/Blessing)
 - [ ] [Crossbow](challenges/Crossbow)
 - [ ] [Laconic](challenges/Laconic)
 - [ ] [Contractor](challenges/Contractor)
@@ -83,19 +83,19 @@
 - [ ] [Vault](challenges/Vault)
 
 ## Reversing
-- [ ] [SealedRune](challenges/SealedRune)
-- [ ] [EncryptedScroll](challenges/EncryptedScroll)
-- [ ] [EndlessCycle](challenges/EndlessCycle)
-- [ ] [Impossimaze](challenges/Impossimaze)
+- [x] [SealedRune](challenges/SealedRune)
+- [x] [EncryptedScroll](challenges/EncryptedScroll)
+- [x] [EndlessCycle](challenges/EndlessCycle)
+- [x] [Impossimaze](challenges/Impossimaze)
 - [ ] [Singlestep](challenges/Singlestep)
 - [ ] [Heart_Protector](challenges/Heart_Protector)
 - [ ] [Gateway](challenges/Gateway)
 
 ## Crypto
-- [ ] [Traces](challenges/Traces)
+- [x] [Traces](challenges/Traces)
 - [ ] [Kewiri](challenges/Kewiri)
-- [ ] [Prelim](challenges/Prelim)
-- [ ] [Hourcle](challenges/Hourcle)
+- [x] [Prelim](challenges/Prelim)
+- [x] [Hourcle](challenges/Hourcle)
 - [ ] [Copperbox](challenges/Copperbox)
 - [ ] [Verilicious](challenges/Verilicious)
 - [ ] [Twin_Oracles](challenges/Twin_Oracles)
@@ -106,15 +106,15 @@
 - [ ] [Lyras_Tavern](challenges/Lyras_Tavern)
 
 ## AI
-- [ ] [Lunar_Orb](challenges/Lunar_Orb)
-- [ ] [Mirror_Witch](challenges/Mirror_Witch)
-- [ ] [Embassy](challenges/Embassy)
-- [ ] [Elixir_Emporium](challenges/Elixir_Emporium)
-- [ ] [Cursed_GateKeeper](challenges/Cursed_GateKeeper)
+- [x] [Lunar_Orb](challenges/Lunar_Orb)
+- [x] [Mirror_Witch](challenges/Mirror_Witch)
+- [x] [Embassy](challenges/Embassy)
+- [x] [Elixir_Emporium](challenges/Elixir_Emporium)
+- [x] [Cursed_GateKeeper](challenges/Cursed_GateKeeper)
 
 ## ML
-- [ ] [Enchanted_Weights](challenges/Enchanted_Weights)
-- [ ] [Crystal_Corruption](challenges/Crystal_Corruption)
+- [x] [Enchanted_Weights](challenges/Enchanted_Weights)
+- [x] [Crystal_Corruption](challenges/Crystal_Corruption)
 - [ ] [Wasteland](challenges/Wasteland)
 - [ ] [Malakars_Deception](challenges/Malakars_Deception)
 - [ ] [Reverse_Prompt](challenges/Reverse_Prompt)
