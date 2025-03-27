@@ -1,0 +1,78 @@
+     RESUME                   0
+
+     LOAD_FAST                0 (mes)
+
+     LOAD_CONST               1 (b'')
+
+     COMPARE_OP              88 (bool(==))
+
+     POP_JUMP_IF_FALSE        2 (to L1)
+
+     LOAD_FAST                0 (mes)
+
+     RETURN_VALUE
+
+L1:     NOP
+
+L2:     LOAD_GLOBAL              0 (AES)
+
+     LOAD_ATTR                2 (new)
+
+     PUSH_NULL
+
+     LOAD_FAST                1 (key)
+
+     LOAD_ATTR                5 (encode + NULL|self)
+
+     CALL                     0
+
+     LOAD_GLOBAL              0 (AES)
+
+     LOAD_ATTR                6 (MODE_CBC)
+
+     LOAD_FAST                1 (key)
+
+     LOAD_ATTR                5 (encode + NULL|self)
+
+     CALL                     0
+
+     CALL                     3
+
+     STORE_FAST               2 (cypher)
+
+     LOAD_CONST               2 (16)
+
+     STORE_FAST               3 (cypher_block)
+
+     LOAD_FAST                2 (cypher)
+
+     LOAD_ATTR                9 (decrypt + NULL|self)
+
+     LOAD_FAST                0 (mes)
+
+     CALL                     1
+
+     STORE_FAST               4 (v)
+
+     LOAD_GLOBAL             11 (unpad + NULL)
+
+     LOAD_FAST_LOAD_FAST     67 (v, cypher_block)
+
+     CALL                     2
+
+L3:     RETURN_VALUE
+
+L4:     PUSH_EXC_INFO
+
+     POP_TOP
+
+L5:     POP_EXCEPT
+
+     RETURN_CONST             3 ('echo Try it againg')
+
+L6:     COPY                     3
+
+     POP_EXCEPT
+
+     RERAISE                  1
+

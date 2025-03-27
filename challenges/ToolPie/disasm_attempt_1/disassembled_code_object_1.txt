@@ -1,0 +1,50 @@
+     RESUME                   0
+
+     LOAD_GLOBAL              0 (AES)
+
+     LOAD_ATTR                2 (new)
+
+     PUSH_NULL
+
+     LOAD_FAST                1 (key)
+
+     LOAD_ATTR                5 (encode + NULL|self)
+
+     CALL                     0
+
+     LOAD_GLOBAL              0 (AES)
+
+     LOAD_ATTR                6 (MODE_CBC)
+
+     LOAD_FAST                1 (key)
+
+     LOAD_ATTR                5 (encode + NULL|self)
+
+     CALL                     0
+
+     CALL                     3
+
+     STORE_FAST               2 (cypher)
+
+     LOAD_CONST               1 (16)
+
+     STORE_FAST               3 (cypher_block)
+
+     LOAD_FAST                2 (cypher)
+
+     LOAD_ATTR                9 (decrypt + NULL|self)
+
+     LOAD_FAST                0 (mes)
+
+     CALL                     1
+
+     STORE_FAST               4 (s)
+
+     LOAD_GLOBAL             11 (unpad + NULL)
+
+     LOAD_FAST_LOAD_FAST     67 (s, cypher_block)
+
+     CALL                     2
+
+     RETURN_VALUE
+

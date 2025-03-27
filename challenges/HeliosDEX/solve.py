@@ -78,24 +78,21 @@ def approve(amount):
 ## ----------------------------------------
 ##               Playground
 ## ----------------------------------------
-reset()
+# reset()
 
 init()
 
 MAL_ADDR = get_mal_addr()
 
 # get_balance(PLAYER_ADDR)
-for _ in range(10_000):
-   swap_for_mal(0.001)
-swap_for_mal(0.00000000000000001)
+# for _ in range(1000):
+#    swap_for_mal(0.001)
+# swap_for_mal(0.00000000000000001)
 get_balance(PLAYER_ADDR)
 get_mal_balance()
 
-approve(1)
-one_time_refund(1)
+# approve(1000)
+# one_time_refund(1000)
 
 get_balance(PLAYER_ADDR)
-
-
-
-# get_flag()
+get_flag()

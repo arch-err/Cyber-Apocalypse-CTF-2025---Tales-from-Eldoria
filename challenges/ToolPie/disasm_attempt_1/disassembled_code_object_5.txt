@@ -1,0 +1,54 @@
+     RETURN_GENERATOR
+
+     POP_TOP
+
+L1:     RESUME                   0
+
+     LOAD_FAST                0 (.0)
+
+     GET_ITER
+
+L2:     FOR_ITER                72 (to L3)
+
+     STORE_FAST               1 (_)
+
+     LOAD_GLOBAL              0 (random)
+
+     LOAD_ATTR                2 (SystemRandom)
+
+     PUSH_NULL
+
+     CALL                     0
+
+     LOAD_ATTR                5 (choice + NULL|self)
+
+     LOAD_GLOBAL              6 (string)
+
+     LOAD_ATTR                8 (ascii_letters)
+
+     LOAD_GLOBAL              6 (string)
+
+     LOAD_ATTR               10 (digits)
+
+     BINARY_OP                0 (+)
+
+     CALL                     1
+
+     YIELD_VALUE              0
+
+     RESUME                   5
+
+     POP_TOP
+
+     JUMP_BACKWARD           74 (to L2)
+
+L3:     END_FOR
+
+     POP_TOP
+
+     RETURN_CONST             0 (None)
+
+L4:     CALL_INTRINSIC_1         3 (INTRINSIC_STOPITERATION_ERROR)
+
+     RERAISE                  1
+
